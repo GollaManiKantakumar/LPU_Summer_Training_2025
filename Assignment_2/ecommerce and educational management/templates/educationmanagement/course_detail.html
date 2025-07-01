@@ -1,0 +1,8 @@
+<h1>{{ course.title }}</h1>
+<p>{{ course.description }}</p>
+<p>Instructor: {{ course.instructor_name }}</p>
+<p>Duration: {{ course.duration }}</p>
+
+<a href="{% url 'course-edit' course.pk %}">Edit</a>
+<a href="{% url 'course-delete' course.pk %}">Delete</a>
+<a href="{% url 'course-list' %}">Back to List</a>
