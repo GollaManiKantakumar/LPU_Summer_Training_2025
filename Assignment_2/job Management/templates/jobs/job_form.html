@@ -1,0 +1,16 @@
+<!-- jobs/templates/jobs/job_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if object %}Edit{% else %}Add{% endif %} Job</title>
+</head>
+<body>
+    <h1>{% if object %}Edit{% else %}Add{% endif %} Job</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'job_list' %}">Back to Job List</a>
+</body>
+</html>

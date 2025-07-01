@@ -1,0 +1,7 @@
+<!-- jobs/templates/jobs/job_confirm_delete.html -->
+<h1>Delete "{{ object.title }}"?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<a href="{% url 'job_list' %}">Cancel</a>

@@ -1,0 +1,12 @@
+<!-- jobs/templates/jobs/job_list.html -->
+<h1>Job Listings</h1>
+<a href="{% url 'job_add' %}">Add New Job</a>
+<ul>
+  {% for job in jobs %}
+    <li>
+      <a href="{% url 'job_detail' job.pk %}">{{ job.title }}</a>
+      | <a href="{% url 'job_edit' job.pk %}">Edit</a>
+      | <a href="{% url 'job_delete' job.pk %}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
